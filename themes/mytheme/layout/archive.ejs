@@ -1,0 +1,10 @@
+<div class="archive-container">
+  <h1 class="archive-title">归档</h1>
+  <% page.posts.each(function(post){ %>
+    <div class="archive-item">
+      <span class="archive-date"><%= date(post.date, 'YYYY-MM-DD') %></span>
+      <a href="<%- url_for(post.path) %>"><%= post.title || '(无标题)' %></a>
+    </div>
+  <% }) %>
+</div>
+<%- partial('_partial/pagination') %>

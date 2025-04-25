@@ -1,0 +1,10 @@
+# 简化的主题配置
+menu:
+  首页: /
+  归档: /archives
+
+# 侧边栏开关
+sidebar: right
+
+# 是否显示文章计数
+show_count: false

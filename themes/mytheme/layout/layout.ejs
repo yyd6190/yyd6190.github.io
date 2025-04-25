@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><%= page.title ? page.title + ' | ' : '' %><%= config.title %></title>
+  <link rel="stylesheet" href="<%= url_for('css/style.css') %>">
+</head>
+<body>
+  <div class="container">
+    <header id="header">
+      <%- partial('_partial/header') %>
+    </header>
+    <div class="main-content">
+      <main id="main">
+        <%- body %>
+      </main>
+      <% if(theme.sidebar){ %>
+        <aside id="sidebar">
+          <%- partial('_partial/sidebar') %>
+        </aside>
+      <% } %>
+    </div>
+    <footer id="footer">
+      <%- partial('_partial/footer') %>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<div class="posts-container">
+  <% page.posts.each(function(post){ %>
+    <div class="post-item">
+      <%- partial('_partial/article', {post: post, index: true}) %>
+    </div>
+  <% }) %>
+</div>
+<%- partial('_partial/pagination') %>

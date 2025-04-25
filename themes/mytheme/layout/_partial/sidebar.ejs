@@ -1,0 +1,27 @@
+<div class="sidebar-container">
+  <div class="sidebar-widget">
+    <h3>最新文章</h3>
+    <% if (site.posts.length) { %>
+      <ul class="recent-post-list">
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li class="recent-post-item">
+            <a href="<%= url_for(post.path) %>"><%= post.title || '(无标题)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>分类</h3>
+    <% if (site.categories.length) { %>
+      <ul class="category-list">
+        <% site.categories.map(function(category){ %>
+          <li class="category-list-item">
+            <a href="<%= url_for(category.path) %>"><%= category.name %></a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </div>
+</div>

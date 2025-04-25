@@ -1,0 +1,10 @@
+<div class="tag-container">
+  <h1 class="tag-title">标签: <%= page.tag %></h1>
+  <% page.posts.each(function(post){ %>
+    <div class="tag-item">
+      <span class="tag-date"><%= date(post.date, 'YYYY-MM-DD') %></span>
+      <a href="<%- url_for(post.path) %>"><%= post.title || '(无标题)' %></a>
+    </div>
+  <% }) %>
+</div>
+<%- partial('_partial/pagination') %>

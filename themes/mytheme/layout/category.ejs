@@ -1,0 +1,10 @@
+<div class="category-container">
+  <h1 class="category-title">分类: <%= page.category %></h1>
+  <% page.posts.each(function(post){ %>
+    <div class="category-item">
+      <span class="category-date"><%= date(post.date, 'YYYY-MM-DD') %></span>
+      <a href="<%- url_for(post.path) %>"><%= post.title || '(无标题)' %></a>
+    </div>
+  <% }) %>
+</div>
+<%- partial('_partial/pagination') %>
