@@ -1,1 +1,10 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<div class="post-layout">
+  <% if(page.toc !== false) { %>
+    <div class="post-toc">
+      <%- partial('_partial/toc') %>
+    </div>
+  <% } %>
+  <div class="post-content">
+    <%- partial('_partial/article', {post: page, index: false}) %>
+  </div>
+</div>

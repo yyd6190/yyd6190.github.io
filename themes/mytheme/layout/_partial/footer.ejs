@@ -1,5 +1,16 @@
 <div class="site-footer">
-  <div class="copyright">
-    &copy; <%= new Date().getFullYear() %> <%= config.author || config.title %>
+  <div class="footer-content">
+    <div class="footer-copyright">
+      &copy; <%= new Date().getFullYear() %> <%= config.author || config.title %>
+    </div>
+    <div class="footer-powered">
+      Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 
+      | Theme <span class="footer-theme-name">MyTheme</span>
+    </div>
+    <% if (config.footer && config.footer.custom_text) { %>
+      <div class="footer-custom">
+        <%- config.footer.custom_text %>
+      </div>
+    <% } %>
   </div>
 </div>

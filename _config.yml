@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: dyy
+title: Whoami
 subtitle: 个人网站
 description: 作种种快乐的变化
 keywords:
-author: Jize Cai
+author: dyy
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: terminal
+theme: mytheme
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -7,4 +7,4 @@ menu:
 sidebar: right
 
 # 是否显示文章计数
-show_count: false
+show_count: true
